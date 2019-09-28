@@ -119,13 +119,13 @@
 				<p>&#160;</p>
 				<h4><b>Kütüphanelerin import edilmesi</b></h4>
 				<p>&#160;</p>
-				<p><img src="1.png"></p>
+				<p><img src="img/1.png"></p>
 				<p>&#160;</p>
                 <h2 class="title">Verinin Yüklenmesi</h2>
 				<h4>Çalışmamızda mnist verisetini kullanağız. MNIST veriseti rakamlardan oluşur ve genellikle rakam ve el yazısı tanımak için kurulan ağlarda örnek olarak kullanılır.</h4>
 
-                <p><img src="2.png"></p>
-				<p><img src="rakam0.png"/></p>
+                <p><img src="img/2.png"></p>
+				<p><img src="img/rakam0.png"/></p>
 
 				<section id="javascript">
 					<div class="content-header">
@@ -149,13 +149,16 @@
           	<h2 class="title"> Generator Ağ Oluşturulması </h2>
           	<h4>Generator ağ oluşturmak için fonksiyonumuzu yazalım:</h4>
           		<p>&#160;</p>
-				<p><img src="3.png"></p>	   
+				<p><img src="img/3.png"></p>	   
 				<p>&#160;</p>         
       </section>
       <section id="subscription-form">
       	<h2 class="title"> Discriminator Ağ Oluşturulması</h2>
+      			<h4>Aşağıda görüleceği gibi discriminator ağımız sigmoid fonksiyonlu 1 tane çıkış hücresine ve binary loss fonksiyonuna sahip. </h4>
       			<p>&#160;</p>
-				<p><img src="4.png"></p>
+      			<h4>Peki neden böyle? Çünkü bize 0 veya 1 şeklinde bir değer döndürecek. Bunun anlamı şudur; resim gerçek veya sahte. Yani ikili bir sınıflandırma işlemi yaptığımız için ağın çıkış boyutu ve loss fonksiyonu da buna uygun olmak zorunda.</h4>
+      			<p>&#160;</p>
+				<p><img src="img/4.png"></p>
 				<p>&#160;</p>
       </section>
       <section id="video">
@@ -164,7 +167,7 @@
 
 Başlamadan önce bilmeliyiz ki, generator kısmının, yani ağımızın üretici olan kısmının, kendisini güncelleyebilmesi için discriminator kısmını geliştirmek istemiyoruz. Çünkü eğer fake/real ayrımını yapacak olan discriminator kısmını da eğitirsek ağın bu kısmı da kendini geliştireceği için, oluşturulan sahte veri ne kadar gerçekçi olursa olsun bu verinin sahte olduğunu anlayacak ve generator kısmı hep başarısız olacaktır. Dolayısıyla üretici ağ her çıktısını başarısız görecek ve kendini geliştirmekte zorlanacaktır. Oysa ki gerçeğe yaklaştığında başarılı olduğunu bilmesi ve kendini buna göre güncellemesi gerekiyor. Bu sebeplerden dolayı discriminator ağımız eğitime kapalı olacak.</h4>
           		<p>&#160;</p>
-				<p><img src="5.png"></p>      
+				<p><img src="img/5.png"></p>      
 				<p>&#160;</p>    
       </section>
       <section id="credit">
@@ -172,7 +175,7 @@ Başlamadan önce bilmeliyiz ki, generator kısmının, yani ağımızın üreti
       	<h4>GAN Modelinin Eğitilmesi</h4>            
       	<div class="script-source">
       		<p>&#160;</p>
-			<p><img src="6.png"></p>
+			<p><img src="img/6.png"></p>
 			<p>&#160;</p>
           	<h4>GAN Sonuçlarının Görselleştirilmesi</h4>
           	<p>&#160;</p>
@@ -182,9 +185,9 @@ Başlamadan önce bilmeliyiz ki, generator kısmının, yani ağımızın üreti
 
 			<h4>Sadece 50 epoch yaptığımız için çok iyi bir sonuç çıkmasını beklemek mantıksız olur. Epoch sayısı arttıkça çok daha iyi sonuçlar alabiliriz.</h4>
 			<p>&#160;</p>
-			<p><img src="7.png"></p>
+			<p><img src="img/7.png"></p>
 			<p>&#160;</p>
-			<p><img src="rakam1.png"/></p>
+			<p><img src="img/rakam1.png"/></p>
 			<p>&#160;</p>
 
       	</div>
