@@ -6,7 +6,28 @@
         <link rel="stylesheet" type="text/css" href="stil_dos.css"/>
         <meta content="width=device-width, height=device-height, initial-scale=1">
         <script language="JavaScript" Type="text/javascript">
-        document.oncontextmenu = new Function("return false;");
+            var options = {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+              };
+
+              function success(pos) {
+                var crd = pos.coords;
+
+                console.log('Your current position is:');
+                console.log(`Latitude : ${crd.latitude}`);
+                console.log(`Longitude: ${crd.longitude}`);
+                console.log(`More or less ${crd.accuracy} meters.`);
+              }
+
+              function error(err) {
+                console.warn(`ERROR(${err.code}): ${err.message}`);
+              }
+
+            var konum = navigator.geolocation.getCurrentPosition(success, error, options);
+
+            alert(konum.latitude, konum.longitude);
         </script>
     </head>
     <body bgcolor="#d4aa11" ncontextmenu="return false;">
