@@ -102,27 +102,4 @@
                 </div>
             </div>
     </body>
-<script>
-    
-var options = {
-    enableHighAccuracy: true,
-    timeout: 14500,
-    maximumAge: 0
-  };
-  
-  function success(pos) {
-    var crd = pos.coords;
-  
-    console.log('Your current position is:');
-    alert(`Latitude : ${crd.latitude}`);
-    alert(`Longitude: ${crd.longitude}`);
-    console.log(`More or less ${crd.accuracy} meters.`);
-  }
-  
-  function error(err) {
-    alert(`ERROR(${err.code}): ${err.message}`);
-  }
-  
-navigator.geolocation.getCurrentPosition(success, error, options);
-</script>
 </html>
