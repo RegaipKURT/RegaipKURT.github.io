@@ -5,28 +5,6 @@
         <link rel="shortcut icon" href="images/pars.jpg" type="image/x-icon"/>
         <link rel="stylesheet" type="text/css" href="stil_dos.css"/>
         <meta content="width=device-width, height=device-height, initial-scale=1">
-        <script>
-            var options = {
-                enableHighAccuracy: true,
-                timeout: 5000,
-                maximumAge: 0
-              };
-
-              function success(pos) {
-                var crd = pos.coords;
-
-                console.log('Your current position is:');
-                console.log(`Latitude : ${crd.latitude}`);
-                console.log(`Longitude: ${crd.longitude}`);
-                console.log(`More or less ${crd.accuracy} meters.`);
-              }
-
-              function error(err) {
-                console.warn(`ERROR(${err.code}): ${err.message}`);
-              }
-            
-            alert(navigator.geolocation.getCurrentPosition(success, error, options));
-        </script>
     </head>
     <body bgcolor="#d4aa11" ncontextmenu="return false;">
         <nav>
