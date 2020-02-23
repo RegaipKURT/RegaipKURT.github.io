@@ -4,28 +4,34 @@
         <title>PARS CORP.</title>
         <link rel="shortcut icon" href="images/pars.jpg" type="image/x-icon"/>
         <link rel="stylesheet" type="text/css" href="stil_dos.css"/>
+        <script src="site.js"></script>
         <meta content="width=device-width, height=device-height, initial-scale=1">
     </head>
     <body bgcolor="#d4aa11" ncontextmenu="return false;">
-        <nav>
-            <table align=center>
-                <tr>
-                    <td class=w3-btn>
-                        <div ><a href="index.html">Anasayfa</a></div>
-                    </td>
-                    <td class=w3-btn>
-                        <div><a href="https://google.com">Ürünler</a></div>
-                    </td>
-                    <td class=w3-btn>
-                        <div><a href="https://google.com">Hizmetler</a></div>
-                    </td>
-                    <td class=w3-btn>
-                        <div><a href="iletisim.html">İletişim</a></div>
-                    </td>
-                </tr>
-            </table>
-        </nav>
-        <table align=center>    
+        <div class="dropdown">
+            <div class="dropbtn" >
+                <a href="index.html">Anasayfa</a>
+            </div>
+        </div>
+        <div class="dropdown" style="margin-left: 20px;">
+            <button class="dropbtn">Ürünler</button>
+            <div class="dropdown-content">
+                <a href="#">Siber Güvenlik</a>
+                <a href="#">Yapay Zeka</a>
+                <a href="#">Veri Bilimi</a>
+            </div>
+        </div>
+        <div class="dropdown" style="margin-left: 20px;">
+            <div class="button-r" >
+                <a href="#" onclick="showError()">Hizmetler</a>
+            </div>
+        </div>
+        <div class="dropdown" style="margin-left: 20px;">
+            <div class="button-r">
+                <a href="iletisim.html">İletişim</a>
+            </div>
+        </div>
+        <table align=center>
             <tr>
                 <td colspan=4>
                     <h1 class="logo-text" align=center>PARS BİLİŞİM GÜVENLİK SİSTEMLERİ</h1>
