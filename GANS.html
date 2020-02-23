@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html style="margin-left: 0%; margin-bottom: 0%; margin-top: 0%;">
+    <head>
+        <title>GAN'S</title>
+        <link rel="shortcut icon" href="images/pars.jpg" type="image/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="stil_dos.css"/>
+        <meta content="width=device-width, height=device-height initial-scale=1">
+    </head>
+    <body style="background-color: goldenrod; margin-top: 0%; margin-left: 0%;" ncontextmenu="return false;" style="font-family: hack-regular;">
+        
+        
+        
+        <!-- ÜST KISIM BAŞLANGIÇ -->
+        <div style="position: fixed; margin-top: 0%; height: fit-content; width: 100%; background-color: #222222; color: goldenrod;">
+                <table style="height: 100%;">
+                    <tr >
+                        <td colspan="3"> 
+                        <div class="button-r-dropdown" >
+                            <div class="button-r" >
+                                <a href="index.html">Anasayfa</a>
+                            </div>
+                        </div>
+                        </td>
+                        <td colspan="2">
+                        <div class="button-r-dropdown" style="margin-left: 20px;">
+                            <a class="button-r">Konular</a> 
+                            <br>
+                            <div class="button-r-dropdown-content">
+                                <br>
+                                <a target=new href="https://github.com/RegaipKURT/Artificial_Intelligence_PYTHON">Yapay Zeka</a>
+                                <a target=new href="https://github.com/RegaipKURT/Machine-Learning-Python">Veri Bilimi</a>
+                                <a target=new href="https://github.com/RegaipKURT/R-Programming-for-Data-Science">İstatistik</a>
+                                <a target=new href="https://www.instagram.com/thekalihacking/"> Siber Güvenlik</a>
+                            </div>
+                        </div>
+                        </td>
+                        <td colspan="2">
+                        <div class="button-r-dropdown" style="margin-left: 20px;">
+                            <a class="button-r">Yazılım</a> 
+                            <br>
+                            <div class="button-r-dropdown-content" >
+                                <br>
+                                <a target=new href="https://github.com/RegaipKURT/Python-Projects" > Python </a>
+                                <a target=new href="https://github.com/RegaipKURT/R-Programming-for-Data-Science" > R </a>
+                                <a target=new href="https://github.com/RegaipKURT/GoLangExamples" > GoLang </a>
+                                <a target=new href="https://github.com/RegaipKURT/BashScript" > &nbsp;&nbsp; BashScript &nbsp;&nbsp; </a>
+                                <a target=new href="https://github.com/RegaipKURT/C-Sharp-Ornekleri" > C# </a>
+                        </div>
+                        </td>
+                        <td colspan="2">
+                        <div class="button-r-dropdown" style="margin-left: 20px;">
+                            <div class="button-r">
+                                <a href="iletisim.html">İletişim</a>
+                            </div>
+                        </div>
+                        </td>
+                    </tr> 
+                    <tr><td><br></td></tr>
+                    <tr> 
+                    <td><a href="#welcome">GAN's Nedir?</a></td>
+                    <td><a href="#yükleme">/ Nasıl Çalışır?</a></td>
+                    <td><a href="#yapı">/ GAN's Örnekleri</a></td>
+                    <td><a href="#kodlama">/ GAN's Kodlanması: PYTHON</a></td>
+                    <td><a href="#modelkurma">/ Model Kurma</a></td>
+                    <td ><a href="#oluşturma">/ Generator Ağ Oluşturulması</a></td>
+                    <td ><a href="#discriminator">/ Discriminator Ağ Oluşturulması</a></td>
+                    <td><a href="#tamyapı">/ GAN Oluşturmak</a></td>
+                    <td><a href="#sonuç">/ Eğitim ve Sonuçlar</a></td>
+                    </tr>
+                </table>
+        </div>
+        <!-- ÜST KISIM BİTİŞ -->
+
+
+        <!-- İÇERİK BAŞLANGIÇ -->
+        <BR></BR><br>
+        <div id="main-wrapper" style="margin-left: 5%; margin-top: 0%;">
+            <div>
+                <br id="welcome"><br>
+                <br>
+                <br>
+                <section >
+                    <div >
+                        <h1>GAN's</h1>
+                    </div>
+                    <div >
+                        <h2 class="twenty">Üretken Çekişmeli Ağlar</h2>
+    
+                        <h4>GAN's bir yapay sinir ağı mimarisidir. Aslında iki ayrı ağ yapısının bir araya gelmesiyle oluşur. GAN'lar kendisine verilen veriseti ile aynı istatistiklere sahip olan yeni veriler oluşturur.</h4>
+                        <p>&#160;</p>
+    
+                        <h4>İşte GAN's diye çoğul bir ifade kullanmamızın sebebi bu iki farklı ağdan oluşan yapıdan kaynaklanır.</h4>
+                        <p>&#160;</p>
+    
+                        
+                    </div>
+                </section>
+                
+                <br id="yükleme"><br>
+                <br>
+                <br>
+                <section >
+                    <div >
+                        <h1>Nasıl Çalışır?</h1>
+                    </div>
+    
+                    <div>
+                        <ol>
+                            <h4>Bu iki ayrı ağdan birisi gerçek verileri alır ve bir denetleyici yapıya gönderir. İkinci ağ yapısı ise orjinal veriyi temsil etmesi gereken başka bir veri oluşturur ve bu veriyi yine aynı denetleyici yapıya gönderir. Denetleyici ağ veya yapı kısmında ise bu veriler test edilir ve ortaya çıkan verilerin sonucunda taklitçi yapıdan gelen verilerin orjinal veriye ne kadar benzediği ölçülür. Taklitçi ağ yapısı eğer yeterince başarılı olamamışsa ağırlıklarını güncelleyerek yeni bir veri oluşturmaya çalışır. Sonuç olarak taklit eden ağın ağırlıkları belirli bir yerden sonra güncellenmiş olur ve orjinal veriye çok benzeyen veya orjinal veriyi iyi temsil eden bir veriseti oluşturmayı öğrenmiş olur.</h4>
+                            <p>&#160;</p>
+                            <h4>Bu durumu bir resimle temsil edersek şöyle görünecektir:</h4>
+                            <p><img src="https://miro.medium.com/max/958/1*-gFsbymY9oJUQJ-A3GTfeg.png" alt="" width="958" height="461" /></p>
+                            <p>&#160;</p>
+                            <h2>Örnek Bir GAN Yapısı:</h2>
+                            <p>&#160;</p>
+                            <p><img src="https://miro.medium.com/max/1741/1*t78gwhhw-hn1CgXc1K89wA.png" alt="" width="958" height="461" /></p>
+                        </ol>
+                    </div>
+    
+                </section>
+    
+                <br id="yapı"><br>
+                <br>
+                <br>
+                <section>
+                    <div >
+                        <h1>GAN's Örnekleri</h1>
+                    </div>
+                    
+                        <p>&#160;</p>
+                    <h4 >Yukarıdaki resimde de görüldüğü gibi aslında kuracağımız sistem tek bir ağdan oluşmayacak. Ayırıcı (Discriminator) ve Üretici (Generator) olmak üzere iki farklı yapı kurup bu yapıları senkronize bir şekilde çalıştırarak GAN modelimizi inşa edeceğiz.</h4>
+                    
+                    <p>&#160;</p>
+                    <h2>Epoch Arttıkça Gelişen GAN Yapısı:</h2>
+                    <p>&#160;</p>
+                    <p><img src="https://miro.medium.com/max/1952/1*xm6_ZfvfKSHe2KS49DT8TQ.png" alt="" width="958" height="461" /></p>
+    
+                    <h4>Bütün bu yapının sonucunda nihai amacımız yeni veri üretmektir. Üretilen yeni veri gerçeğine ne kadar benziyorsa ağımız o kadar başırılı olmuş demektir. İyi bir yapıda ürettiğimiz yeni veriler gerçeğinden ayırt edilemeyecek kadar kalitelidir. </h4>
+                    <p>&#160;</p>
+                    <h4>Örnek olarak GANs ile üretilmiş aslında gerçekte hiç olmayan insan yüzlerine bakalım:</h4>
+                    <p>&#160;</p>
+                    <p><img src="https://wp-assets.futurism.com/2018/12/ai1.jpg" alt="" width="958" height="1100" /></p>
+                
+                <br id="kodlama"><br>
+                <br>
+                <br>  
+                <section>
+                    <div >
+                        <h1>GAN's Mimarisinin Kodlanması</h1>
+                    </div>
+                    <p>&#160;</p>
+                    <h4>Çok fazla uzatmadan bütün bu yapının Python ve Keras ile nasıl kodlanabileceğine bir bakalım: </h4>
+                    <p>&#160;</p>
+                    <h4><b>Kütüphanelerin import edilmesi</b></h4>
+                    <p>&#160;</p>
+                    <p><img src="images/1.png"></p>
+                    <p>&#160;</p>
+                    <h2 >Verinin Yüklenmesi</h2>
+                    <h4>Çalışmamızda mnist verisetini kullanağız. MNIST veriseti rakamlardan oluşur ve genellikle rakam ve el yazısı tanımak için kurulan ağlarda örnek olarak kullanılır.</h4>
+    
+                    <p><img src="images/2.png"></p>
+                    <p><img src="images/rakam0.png"/></p>
+                    
+                    <br id="modelkurma"><br>
+                    <br>
+                    <br> 
+                    <section>
+                        <div >
+                        <h1>Model Kurma Aşaması</h1>
+                        </div>
+                        <p>&#160;</p>
+                        <h4 >GAN's modeli Generator ve Discriminator olmak üzere iki ağdan oluşur. Bu ağları ayrı ayrı kurup daha sonra genel modelimizi oluşturacağız.Generator ağ oluşturmak için fonksiyonumuzu yazalım. </h4>
+                        <h4><strong>Fakat burada anlaşılması gereken kısım Generator kısımda output shape önemli iken Discriminator ağın input shape'i önemlidir ve alacağı resimlere uygun olmalıdır. Çünkü bu ağa resimleri direkt olarak vereceğiz, generator gibi kendisi üretmeyecek.</strong></h4>
+                        <p>&#160;</p>
+                        <h4>Çalışma mantığını da anlayabilmek adına biraz daha açalım. </h4>
+                        <p>&#160;</p>
+                        <h4> Discriminator ağ hem gerçek resimleri hem de Generator ağdan gelen resimleri alır. Tıpkı bir dedektif gibi hangi resmin sahte hangisinin gerçek olduğunu ayırt etmeye çalışır.</h4>
+                        <p>&#160;</p>
+                        <h4>Generator ağ orjinal resmi taklit etmeye çalıştığı için output shape'i orjinal resmin boyutundadır. Orjinal resimle aynı boyutta olmasından dolayı üretilen bu resmi Discriminator ağ direk olarak alabilir. Çünkü bu ağın da giriş boyutu orjinal resimle aynıdır.</h4>
+                        <p>&#160;</p>
+                        <h4>Son adımda iki resmi de alan Discriminator ağımız hangi resmin gerçek hangisinin sahte olduğunu ayırt etmeyi öğrenirken, hataları ile kendini güncelleyen Generator ağ ise orjinal resimlere gittikçe daha çok benzeyen resimler oluşturmayı öğrenecektir.</h4>
+    
+              </section>
+              
+                <br id="oluşturma"><br>
+                <br>
+                <br>  <br>
+                <section>
+                  <h2 > Generator Ağ Oluşturulması </h2>
+                  <h4>Generator ağ oluşturmak için fonksiyonumuzu yazalım:</h4>
+                      <p>&#160;</p>
+                    <p><img src="images/3.png"></p>	   
+                    <p>&#160;</p>         
+          </section>
+
+            <br id="discriminator"><br>
+            <br>
+            <br> <br>
+            <section>
+              <h2 > Discriminator Ağ Oluşturulması</h2>
+                      <h4>Aşağıda görüleceği gibi discriminator ağımız sigmoid fonksiyonlu 1 tane çıkış hücresine ve binary loss fonksiyonuna sahip. </h4>
+                      <p>&#160;</p>
+                      <h4>Peki neden böyle? Çünkü bize 0 veya 1 şeklinde bir değer döndürecek. Bunun anlamı şudur; resim gerçek veya sahte. Yani ikili bir sınıflandırma işlemi yaptığımız için ağın çıkış boyutu ve loss fonksiyonu da buna uygun olmak zorunda.</h4>
+                      <p>&#160;</p>
+                    <p><img src="images/4.png"></p>
+                    <p>&#160;</p>
+          </section>
+            <br id="tamyapı"><br>
+            <br>
+            <br> <br>
+          <section>
+              <h2 > Modelin Oluşturulması ve Eğitilmesi </h2>
+              <h4>Generator ve Discriminator ağlarımızı oluşturduktan sonra artık tek bir yapıda birleştirip GAN modelimizi oluşturabiliriz.
+    
+    Başlamadan önce bilmeliyiz ki, generator kısmının, yani ağımızın üretici olan kısmının, kendisini güncelleyebilmesi için discriminator kısmını geliştirmek istemiyoruz. Çünkü eğer fake/real ayrımını yapacak olan discriminator kısmını da eğitirsek ağın bu kısmı da kendini geliştireceği için, oluşturulan sahte veri ne kadar gerçekçi olursa olsun bu verinin sahte olduğunu anlayacak ve generator kısmı hep başarısız olacaktır. Dolayısıyla üretici ağ her çıktısını başarısız görecek ve kendini geliştirmekte zorlanacaktır. Oysa ki gerçeğe yaklaştığında başarılı olduğunu bilmesi ve kendini buna göre güncellemesi gerekiyor. Bu sebeplerden dolayı discriminator ağımız eğitime kapalı olacak.</h4>
+                      <p>&#160;</p>
+                    <p><img src="images/5.png"></p>      
+                    <p>&#160;</p>    
+          </section>
+
+            <br id="sonuç"><br>
+            <br>
+            <br> 
+          <section>
+              <h1 >Eğitim ve Sonuç</h1>		
+              <h4>GAN Modelinin Eğitilmesi</h4>            
+              <div >
+                  <p>&#160;</p>
+                <p><img src="images/6.png"></p>
+                <p>&#160;</p>
+                  <h4>GAN Sonuçlarının Görselleştirilmesi</h4>
+                  <p>&#160;</p>
+                  <h4>Bütün kodlara ulaşmak isterseniz aşağıdaki linkten ulaşabilirsiniz:</h4>
+                <li><a style="font-size: 25px;" href="https://github.com/RegaipKURT/Artificial_Intelligence_PYTHON/blob/master/GAN.ipynb" target="_blank" >Github Python Kodları</a></li>
+                <p>&#160;</p>
+    
+                <h4>Sadece 50 epoch yaptığımız için çok iyi bir sonuç çıkmasını beklemek mantıksız olur. Epoch sayısı arttıkça çok daha iyi sonuçlar alabiliriz.</h4>
+                <p>&#160;</p>
+                <p><img src="images/7.png"></p>
+                <p>&#160;</p>
+                <p><img src="images/rakam1.png"/></p>
+                <p>&#160;</p>
+    
+              </div>
+          </section>
+        </div>
+
+        <!-- İÇERİK BAŞLANGIÇ -->
+
+
+
+        <!-- ALT KISIM BAŞLANGIÇ-->
+        <div class="footer" style="height: 5%;">
+            <div class="footer-bottom">
+                PARS CORPORATION © 2020 | Designed by Regaip KURT.
+            </div>
+        </div>
+        <!-- ALT KISIM BİTİŞ-->
+    </body>
+</html>

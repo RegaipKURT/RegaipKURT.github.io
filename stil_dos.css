@@ -83,7 +83,7 @@ h1 {font-size:50px; text-align: center;}
 
 /* Dropdown Content (Hidden by Default) */
 .button-r-dropdown-content {
-  opacity: 0.7;
+  opacity: 0.85;
   width: fit-content;
   display: none;
   position: absolute;
