@@ -57,7 +57,6 @@ h1 {font-size:50px; text-align: center;}
   transform: scale(1.1);
 }
 
-/* The container <div> - needed to position the dropdown content */
 .button-r-dropdown {
   position: relative;
   width: fit-content;
@@ -81,7 +80,6 @@ h1 {font-size:50px; text-align: center;}
   transform: scale(1.1);
 }
 
-/* Dropdown Content (Hidden by Default) */
 .button-r-dropdown-content {
   opacity: 0.85;
   width: fit-content;
@@ -97,7 +95,7 @@ h1 {font-size:50px; text-align: center;}
   
 }
 
-/* Links inside the dropdown */
+
 .button-r-dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -113,10 +111,10 @@ h1 {font-size:50px; text-align: center;}
   opacity: 1;
 }
 
-/* Change color of dropdown links on hover */
+
 .button-r-dropdown-content a:hover {background-color: #355C7D; transform: scale(1.1); transition: 0.3s;}
 
-/* Show the dropdown menu on hover */
+
 .button-r-dropdown:hover .button-r-dropdown-content {
   display: block;
   transform: scale(1.1);
@@ -124,7 +122,7 @@ h1 {font-size:50px; text-align: center;}
   transition: 0.5s;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
+
 .button-r-dropdown:hover .button-r {
   background-color: black;
   color: #d4aa11;
