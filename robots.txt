@@ -1,3 +1,2 @@
-User-agent: Googlebot
-Allow: /index.html
-Allow: /contents/gans.html
+User-agent: *
+Disallow: 
