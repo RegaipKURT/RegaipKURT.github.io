@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
   <url>
+    <loc>http://www.regaipkurt.github.io/</loc>
     <loc>http://www.regaipkurt.github.io/index.html</loc>
+    <loc>http://www.regaipkurt.github.io/contents/gans.html</loc>
     <lastmod>2020-16-05</lastmod>
   </url>
 </urlset>
