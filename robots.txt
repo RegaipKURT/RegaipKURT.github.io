@@ -1,9 +1,3 @@
 User-agent: *
 Allow: /index.html
 Allow: /contents/gans.html
-Allow: /sitemap.xml
-Disallow: /contents/
-Disallow: /images/
-Disallow: /site.js
-Disallow: /stil_dos.css
-Disallow: /sitemap.xml
